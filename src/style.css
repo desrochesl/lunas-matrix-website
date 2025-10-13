@@ -16,7 +16,34 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --square-size: 2.25rem;
 }
+
+.input.validator {
+  width: var(--square-size);
+  height: var(--square-size);
+  padding: 0.125rem;
+  /* keep small padding so text isn't flush to edges */
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+}
+
+/* remove number input spinner controls for consistent square look */
+input[type="number"].validator::-webkit-outer-spin-button,
+input[type="number"].validator::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"].validator {
+  -moz-appearance: textfield;
+}
+
+
 
 /*
 
@@ -77,9 +104,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
