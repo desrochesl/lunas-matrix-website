@@ -6,10 +6,4 @@
 - Multiply a Matrix by a constant value
 - Multiply two Matrices by each other
 
-## Made using:
-
-- Vue
-- Tailwindcss
-- DaisyUI
-
 ## Currently Unfinished
