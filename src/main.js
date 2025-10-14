@@ -24,7 +24,7 @@ createApp({
           title: "Add Matrices",
           description:
             "Combine matrices of equal dimensions by adding their elements.",
-          link: "./matrixFunctions/add.html",
+          link: "./src/matrixFunctions/add.html",
           buttonText: "Try Add",
         },
         {
