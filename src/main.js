@@ -44,6 +44,6 @@ createApp({
   },
 }).mount("#app");
 
-createApp(Navbar).mount('#navbar')
+createApp(Navbar).mount("#navbar");
 
 // createApp(Table).mount('#myDiv')
