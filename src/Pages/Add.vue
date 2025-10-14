@@ -1,56 +1,53 @@
+
 <template>
-  <div class="flex justify-center">
-    <label class="flex justify-center m-2">
-      <input
-        type="number"
-        v-model.number="rows"
-        min="1"
-        class="input w-10 text-center border border-base-300 m-2"
-      />
-      <p class="text mt-4">x</p>
-      <input
-        type="number"
-        v-model.number="cols"
-        min="1"
-        class="input w-10 text-center border border-base-300 m-2"
-      />
-    </label>
+  <div class="flex justify-center items-center m-10">
+    <button @click="addMatrices" class="btn">Add Matrices</button>
   </div>
-  <div class="flex justify-center">
-    <button class="btn m-4" onclick="my_modal_1.showModal()">
-      Create Matrix
-    </button>
-  </div>
+  <div class="flex mt-0">
+    <matrix-table ref="matrix1" :rows="3" :cols="3"></matrix-table>
+    <matrix-table ref="matrix2" :rows="3" :cols="3"></matrix-table>
 
-  <dialog id="my_modal_1" class="modal">
-    <div class="modal-box">
-      <matrix-table :rows="rows" :cols="cols"></matrix-table>
-      <div class="modal-action">
-        <form method="dialog">
-          <!-- If there is a button in the form, it will close the modal -->
-          <button class="btn">Accept</button>
-        </form>
-      </div>
+
+
+    <!-- Display result if it exists -->
+    <div class="p-0 mx-auto place-items-center" v-if="resultMatrix.length > 0">
+      <matrix-table
+        ref="resultTable"
+        :rows="resultMatrix.length" 
+        :cols="resultMatrix[0].length" 
+        :isReadOnly="true">
+      </matrix-table>
     </div>
-  </dialog>
-
-  <!-- <div class="flex flex-wrap">
-    <matrix-table></matrix-table>
-    <matrix-table></matrix-table>
-    <matrix-table></matrix-table>
-  </div> -->
+  </div>
 </template>
 
 <script>
 import MatrixTable from "../components/MatrixTable.vue";
+import matrixFunctions from "../js/matrixFunctions.js";
 
 export default {
   components: { MatrixTable },
   data() {
     return {
-      rows: 3,
-      cols: 3,
+      resultMatrix: [],
     };
+  },
+  methods: {
+    addMatrices() {
+      // Get the data from both matrix tables
+      const matrix1 = this.$refs.matrix1.getMatrixData();
+      const matrix2 = this.$refs.matrix2.getMatrixData();
+      
+      try {
+        // Call the imported function
+        this.resultMatrix = matrixFunctions.addMatrix(
+          JSON.parse(JSON.stringify(matrix1)), // deep copy
+          JSON.parse(JSON.stringify(matrix2))  // deep copy
+        );
+      } catch (error) {
+        alert(error.message);
+      }
+    },
   },
 };
 </script>
