@@ -3,6 +3,7 @@ import "./style.css";
 
 import Table from "./components/MatrixTable.vue";
 import FeatureCard from "./components/Card.vue";
+import Navbar from "./components/Navbar.vue";
 
 createApp({
   components: { FeatureCard },
@@ -42,5 +43,7 @@ createApp({
     };
   },
 }).mount("#app");
+
+createApp(Navbar).mount('#navbar')
 
 // createApp(Table).mount('#myDiv')
