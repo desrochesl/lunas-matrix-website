@@ -1,30 +1,30 @@
 <template>
   <div class="navbar bg-base-100 shadow-sm">
     <div class="flex-1">
-      <a class="btn btn-ghost text-5xl">Matrices</a>
+      <a class="btn btn-ghost text-5xl" href="/">Matrices</a>
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1 items-center">
         <li>
           <details class="h-12 min-h-12 items-center">
             <summary
-              class="h-12 min-h-12 px-4 flex font-bold items-center justify-center hover:text-pink-800"
+                class="h-12 min-h-12 px-4 flex font-bold items-center justify-center hover:text-pink-800"
             >
               Functions
             </summary>
-            <ul class="bg-base-100 rounded-t-none p-2">
-              <li><a>Add</a></li>
-              <li><a>Multiply</a></li>
-              <li><a>Row Reduce</a></li>
-              <li><a>Determinant</a></li>
+            <ul class="bg-base-100 rounded-t-none p-2 absolute right-0 mt-2 shadow-lg z-50">
+              <li><a href="/add">Add</a></li>
+<!--              <li><a href="/multiply">Multiply</a></li>-->
+<!--              <li><a href="/rowreduce">Row Reduce</a></li>-->
+<!--              <li><a href="/determinant">Determinant</a></li>-->
             </ul>
           </details>
         </li>
         <li class="hover:text-pink-800 transition-colors">
           <a
-            href="https://luna.desroches.org/github"
-            target="_blank"
-            class="flex items-center justify-center h-12 w-12"
+              class="flex items-center justify-center h-12 w-12"
+              href="https://luna.desroches.org/github"
+              target="_blank"
           >
             <i class="fa-brands fa-github text-2xl"></i>
           </a>

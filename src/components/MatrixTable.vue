@@ -67,6 +67,9 @@ export default {
     getMatrixData() {
       return this.matrixData;
     },
+    setMatrixData(data) {
+      this.matrixData = data;
+    },
   },
 };
 </script>

@@ -26,18 +26,24 @@ export default {
           link: "/add",
           buttonText: "Try Add",
         },
-        {
-          title: "Multiply Matrices",
-          description: "Perform matrix multiplication on compatible matrices.",
-          link: "/multiply",
-          buttonText: "Try Multiply",
-        },
-        {
-          title: "Row Reduction",
-          description: "Reduce a matrix to its row echelon form step-by-step.",
-          link: "/rowreduce",
-          buttonText: "Try Row Reduce",
-        },
+        // {
+        //   title: "Multiply Matrices",
+        //   description: "Perform matrix multiplication on compatible matrices.",
+        //   link: "/multiply",
+        //   buttonText: "Try Multiply",
+        // },
+        // {
+        //   title: "Row Reduction",
+        //   description: "Reduce a matrix to its row echelon form step-by-step.",
+        //   link: "/rowreduce",
+        //   buttonText: "Try Row Reduce",
+        // },
+        // {
+        //   title: "Determinant",
+        //   description: "Calculate the determinant of a square matrix.",
+        //   link: "/determinant",
+        //   buttonText: "Try Determinant",
+        // },
       ],
     };
   },
