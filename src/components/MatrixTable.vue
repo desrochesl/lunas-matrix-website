@@ -1,45 +1,37 @@
 <template>
-  <div class="p-4 m-4">
-    <!-- Input for number of cells -->
-    <label class="flex justify-center m-2">
-      <input
-        type="number"
-        v-model.number="numRows"
-        min="1"
-        class="input w-10 text-center border border-base-300 m-2"
-      />
-      <p class="text mt-4">x</p>
-      <input
-        type="number"
-        v-model.number="numColumns"
-        min="1"
-        class="input w-10 text-center border border-base-300 m-2"
-      />
-    </label>
+  <div class="p-0 mx-auto place-items-center">
 
     <div class="overflow-x-auto flex justify-center mt-8 mb-8">
       <table class="table border border-base-300 w-auto bg-base-100">
-        <MatrixRow
-          v-for="index in numRows"
-          :key="index"
-          :numColumns="numColumns"
-        />
+        <tbody>
+          <tr class="w-20 h-20 text-center border border-base-300" v-for="r in rows" :key="r">
+            <td v-for="c in cols" :key="c">
+              <input
+                type="number"
+                class="input validator input-xs m-2"
+                min="0"
+              />
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
 </template>
 
 <script>
-import MatrixRow from "./MatrixRow.vue";
 
 export default {
-  name: "MatrixTable",
-  components: { MatrixRow },
-  data() {
-    return {
-      numColumns: 3,
-      numRows: 3,
-    };
+
+  props: {
+    rows: {
+      type: Number,
+      required: true,
+    },
+    cols: {
+      type: Number,
+      required: true,
+    },
   },
 };
 </script>

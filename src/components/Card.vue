@@ -7,7 +7,7 @@
       <h2 class="card-title">{{ title }}</h2>
       <p>{{ description }}</p>
       <div class="card-actions justify-end">
-        <a :href="link" target="_blank" class="btn btn-primary">{{
+        <a :href="link" target="_self" class="btn btn-primary">{{
           buttonText
         }}</a>
       </div>
