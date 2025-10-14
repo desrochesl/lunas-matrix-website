@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <div class="p-4 m-4">
     <!-- Input for number of cells -->
     <label class="flex justify-center m-2">
       <input
@@ -8,7 +8,7 @@
         min="1"
         class="input w-10 text-center border border-base-300 m-2"
       />
-      <p class="text mt-4">by</p>
+      <p class="text mt-4">x</p>
       <input
         type="number"
         v-model.number="numColumns"

@@ -45,3 +45,7 @@ function multiplyMatrices(matrix1, matrix2) {
 
   return result;
 }
+
+export default {
+  addMatrix
+}
