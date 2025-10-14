@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import FeatureCard from "./Card.vue";
+import FeatureCard from "../components/Card.vue";
 
 export default {
   components: { FeatureCard },
@@ -21,8 +21,9 @@ export default {
       cards: [
         {
           title: "Add Matrices",
-          description: "Combine matrices of equal dimensions by adding their elements.",
-          link: "/test",
+          description:
+            "Combine matrices of equal dimensions by adding their elements.",
+          link: "/add",
           buttonText: "Try Add",
         },
         {

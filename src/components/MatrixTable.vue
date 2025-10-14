@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 m-4">
+  <div class="p-0 mx-auto place-items-center">
     <!-- Input for number of cells -->
     <label class="flex justify-center m-2">
       <input
