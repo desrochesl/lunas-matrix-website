@@ -1,23 +1,19 @@
 
 <template>
-  <div class="flex justify-center items-center m-10">
+  <div class="flex justify-center items-center m-5">
     <button @click="addMatrices" class="btn">Add Matrices</button>
   </div>
   <div class="flex mt-0">
     <matrix-table ref="matrix1" :rows="3" :cols="3"></matrix-table>
     <matrix-table ref="matrix2" :rows="3" :cols="3"></matrix-table>
 
-
-
     <!-- Display result if it exists -->
-    <div class="p-0 mx-auto place-items-center" v-if="resultMatrix.length > 0">
       <matrix-table
         ref="resultTable"
-        :rows="resultMatrix.length" 
-        :cols="resultMatrix[0].length" 
+        :rows="3"
+        :cols="3"
         :isReadOnly="true">
       </matrix-table>
-    </div>
   </div>
 </template>
 
